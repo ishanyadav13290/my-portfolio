@@ -1,41 +1,31 @@
 import { Box, Flex, Image, Spacer, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import TypewriterComponent from "typewriter-effect";
 
 export default function Me(){
     let [flexWidth, setFlexWidth] = useState(40)
-
-    // useEffect(() => {
-    //     let intervalDecrease = setInterval(() => {
-    //       if (flexWidth <= 0) {
-    //         clearInterval(intervalDecrease);
-    //         let intervalIncrease = setInterval(() => {
-    //           setFlexWidth(flexWidth + 1);
-    //           if (flexWidth >= 40) {
-    //             clearInterval(intervalIncrease);
-    //           }
-    //         }, 100);
-    //       } else {
-    //         setFlexWidth(flexWidth - 1);
-    //       }
-    //     }, 100);
-    //     return () => clearInterval(intervalDecrease);
-    //   }, [flexWidth]);
-    useEffect(() => {
-        let interval = setInterval(() => {
-          if (flexWidth <= 0) {
-            setFlexWidth(flexWidth + 1);
-          } else if (flexWidth >= 40) {
-            setFlexWidth(flexWidth - 1);
-          } 
-        }, 100);
-      
-        // return () => clearInterval(interval);
-      }, [flexWidth]);
-      
       
     return <Box h={"100%"}>
         <Flex justify={"flex-end"} alignItems={"center"}>
-        <Box  w={`${flexWidth}%`} overflow={"hidden"} ><Text w={"400px"} fontSize={"4xl"} fontWeight={"700"}>I'm Ishan Yadav</Text></Box>
+        <Box  w={`${flexWidth}%`} overflow={"hidden"} fontSize={"4xl"}>
+<TypewriterComponent
+  onInit={(typewriter) => {
+    typewriter.start()
+    .typeString('Hello🖐')
+    .pauseFor(1000)
+    .deleteAll()
+    .typeString("I'm Ishan Yadav")
+    .pauseFor(1000)
+    .deleteChars(6)
+    .typeString(", a Full-Stack Developer")
+  .pauseFor(1000)
+  .start()
+  }}
+  options={{
+    loop:true
+  }}
+/>
+</Box>
         <Spacer />
             <Flex justify={"center"}>
                 <Image src="https://avatars.githubusercontent.com/u/112482175?v=4" borderRadius={"50%"} w={"40%"}  />
