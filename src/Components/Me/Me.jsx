@@ -1,5 +1,5 @@
-import { Box, Flex, Image, Spacer, Text } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { Box, Flex, Image, Spacer } from "@chakra-ui/react";
+import { useState } from "react";
 import TypewriterComponent from "typewriter-effect";
 
 export default function Me(){
@@ -7,11 +7,11 @@ export default function Me(){
       
     return <Box h={"100%"}>
         <Flex justify={"flex-end"} alignItems={"center"}>
-        <Box  w={`${flexWidth}%`} overflow={"hidden"} fontSize={"4xl"}>
+        <Box fontWeight={700} w={`${flexWidth}%`} overflow={"hidden"} fontSize={"4xl"}>
 <TypewriterComponent
   onInit={(typewriter) => {
     typewriter.start()
-    .typeString('Hello🖐')
+    .typeString('Hello')
     .pauseFor(1000)
     .deleteAll()
     .typeString("I'm Ishan Yadav")
