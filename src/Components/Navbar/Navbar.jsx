@@ -1,13 +1,14 @@
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
-import Me from '../Me/Me'
+import Experience from './NavComponents/Experience/Experience'
+import Me from './NavComponents/Me/Me'
 export default function Navbar(){
     return <>
         <Tabs orientation='vertical' h={"100%"}>
   <TabList w={"10%"} display={"flex"} justifyContent={"space-between"}>
     <Tab>Who Am I?</Tab>
     <Tab>Works</Tab>
+    <Tab>Experience</Tab>
     <Tab>Education</Tab>
-    <Tab>Contact</Tab>
     <Tab>Contact Me</Tab>
   </TabList>
 
@@ -18,8 +19,8 @@ export default function Navbar(){
     <TabPanel>
       <p>two!</p>
     </TabPanel>
-    <TabPanel>
-      <p>three!</p>
+    <TabPanel h={"100%"}>
+      <Experience />
     </TabPanel>
     <TabPanel>
       <p>four!</p>
