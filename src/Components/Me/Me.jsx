@@ -17,7 +17,7 @@ export default function Me(){
     .typeString("I'm Ishan Yadav")
     .pauseFor(1000)
     .deleteChars(6)
-    .typeString(", a Full-Stack Developer")
+    .typeString(", a Full-Stack Developer (MERN)")
   .pauseFor(1000)
   .start()
   }}
