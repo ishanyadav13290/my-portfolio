@@ -6,6 +6,7 @@ export default function Experience(){
         <Text fontSize={'2xl'}>The Help Foundation</Text>
         <Text as={"cite"} fontSize={"sm"}>Feb 2023 to March 2023</Text>
         <Text as={"cite"} fontSize={"sm"}>Feb 2023 to March 2023</Text>
+        <Text as={"cite"} fontSize={"sm"}>Feb 2023 to March 2023</Text>
         </Box>
     </Box>
 }
