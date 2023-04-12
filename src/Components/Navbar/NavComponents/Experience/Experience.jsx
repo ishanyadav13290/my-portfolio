@@ -37,9 +37,7 @@ export default function Experience() {
         <Text as={"cite"} fontSize={"sm"}>
           Feb 2023 to March 2023
         </Text>
-        <Text as={"cite"} fontSize={"sm"}>
-          Feb 2023 to March 2023
-        </Text>
+        
       </Box>
     </Box>
   );
